@@ -30,4 +30,10 @@ class QueryProcessorTest {
 		}
 	}
 
+	@Test
+	void doesReturnName(){
+		String actual = queryProcessor.process("name");
+		assertEquals("Lucas", actual);
+	}
+
 }
