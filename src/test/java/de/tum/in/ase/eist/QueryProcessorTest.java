@@ -36,4 +36,10 @@ class QueryProcessorTest {
 		assertEquals("Lucas", actual);
 	}
 
+	/*@Test
+	void returnsSum() {
+		String actual = queryProcessor.process("plus");
+
+	}*/
+
 }

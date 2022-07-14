@@ -2,6 +2,9 @@ package de.tum.in.ase.eist;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class QueryProcessor {
 
@@ -13,8 +16,17 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist.";
         } else if (query.contains("name")) {
            return "Lucas";
-        } else { // TODO extend the programm here
-            return "";
+        } else if (query.contains("plus")){
+            // TODO extend the programm here
+            String[] space = query.split(" ");
+
+            int number1 = Integer.parseInt(space[2]);
+            int number2 = Integer.parseInt(space[4]);
+            int result = number1 + number2;
+            return String.valueOf(result);
+
         }
+        else
+            return "";
     }
 }
